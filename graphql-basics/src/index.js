@@ -62,12 +62,44 @@ import { GraphQLServer } from "graphql-yoga";
 //   },
 // };
 
+// Demo user data
+const users = [
+  { id: "1", name: "Andrew", email: "andrew@example.com", age: 27 },
+  { id: "2", name: "Sarah", email: "sarah@example.com" },
+  { id: "3", name: "Mike", email: "mike@example.com" },
+];
+
+const posts = [
+  {
+    id: "10",
+    title: "GraphQL 101",
+    body: "This is how to use GraphQL...",
+    isPublished: true,
+  },
+  {
+    id: "11",
+    title: "GraphQL 201",
+    body: "This is an advanced GraphQL post...",
+    isPublished: false,
+  },
+  {
+    id: "12",
+    title: "Programming Music",
+    body: "",
+    isPublished: false,
+  },
+];
+
 const typeDefs = `
 type Query {
-  greeting(name: String, position: String): String!
-  add(a: Float!, b: Float!): Float!
+  users(query: String): [User!]!
+  posts(query: String): [Post!]!
   me: User!
   post: Post!
+  greeting(name: String, position: String): String!
+  add(a: Float!, b: Float!): Float!
+  sum(numbers: [Float!]!): Float!
+  grades: [Int!]!
 }
 type User {
   id: ID!
@@ -86,16 +118,27 @@ type Post {
 
 const resolvers = {
   Query: {
-    add(parent, args, ctx, info) {
-      return args.a + args.b;
-    },
-    greeting(parent, args, ctx, info) {
-      // console.log(args)
-      if (args.name && args.position) {
-        return `Hello, ${args.name}! You are my favorite ${args.position}.`;
-      } else {
-        return "Hello";
+    users(parent, args, ctx, info) {
+      if (!args.query) {
+        return users;
       }
+      return users.filter((user) => {
+        return user.name.toLowerCase().includes(args.query.toLowerCase());
+      });
+    },
+    posts(parent, args, ctx, info) {
+      if (!args.query) {
+        return posts;
+      }
+      return posts.filter((post) => {
+        const isTitle = post.title
+          .toLowerCase()
+          .includes(args.query.toLowerCase());
+        const isBody = post.body
+          .toLowerCase()
+          .includes(args.query.toLowerCase());
+        return isTitle || isBody;
+      });
     },
     me() {
       return {
@@ -112,6 +155,28 @@ const resolvers = {
         body: "",
         isPublished: false,
       };
+    },
+    add(parent, args, ctx, info) {
+      return args.a + args.b;
+    },
+    sum(parent, args, ctx, info) {
+      if (args.numbers.length == 0) {
+        return 0;
+      }
+      return args.numbers.reduce((accumulator, currentValue) => {
+        return accumulator + currentValue;
+      });
+    },
+    grades(parent, args, ctx, info) {
+      return [99, 80, 93];
+    },
+    greeting(parent, args, ctx, info) {
+      // console.log(args)
+      if (args.name && args.position) {
+        return `Hello, ${args.name}! You are my favorite ${args.position}.`;
+      } else {
+        return "Hello";
+      }
     },
   },
 };
