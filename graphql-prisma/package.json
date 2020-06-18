@@ -1,0 +1,22 @@
+{
+  "name": "graphql-prisma",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/solygambas/graphql-bootcamp.git"
+  },
+  "author": "solygambas",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/solygambas/graphql-bootcamp/issues"
+  },
+  "homepage": "https://github.com/solygambas/graphql-bootcamp#readme",
+  "devDependencies": {
+    "@prisma/cli": "^2.0.1"
+  }
+}
