@@ -1,12 +1,8 @@
-# The Modern GraphQL Bootcamp : Projects
-
-## 1) GraphQL Basics
+# GraphQL Basics
 
 A simple blogging application back-end to understand GraphQL basics.
 
-[See graphql-basics folder](https://github.com/solygambas/graphql-bootcamp/tree/master/graphql-basics)
-
-### Features
+## Features
 
 - understanding GraphQL schemas with graphql-yoga.
 - creating a GraphQL server with typeDefs and resolvers.
