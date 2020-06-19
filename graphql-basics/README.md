@@ -13,7 +13,7 @@ A simple blogging application back-end to understand GraphQL basics.
 - creating, updating and deleting data with GraphQL mutations.
 - generating unique IDs with uuid.
 - adopting a scalable folder structure.
-- leveraging GraphQL subscriptions to listen to events and publish them in real-time.
+- leveraging GraphQL subscriptions to listen to events and publish them.
 - using enums to define a set of constants for events (created, updated, deleted).
 - handling ES6 import/export feature and object spread operator with Babel.
 
