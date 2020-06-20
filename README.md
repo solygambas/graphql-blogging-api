@@ -2,7 +2,7 @@
 
 ## 1) GraphQL Basics
 
-A simple blogging application back-end to understand GraphQL basics.
+A simple blogging API to understand GraphQL basics.
 
 [See graphql-basics folder](https://github.com/solygambas/graphql-bootcamp/tree/master/graphql-basics)
 
