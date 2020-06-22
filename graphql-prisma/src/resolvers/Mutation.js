@@ -1,21 +1,12 @@
 import uuidv4 from "uuid/v4";
 
 const Mutation = {
-  createUser(parent, args, { db }, info) {
-    const emailTaken = db.users.some((user) => user.email === args.data.email);
+  async createUser(parent, args, { prisma }, info) {
+    const emailTaken = await prisma.exists.User({ email: args.data.email });
     if (emailTaken) {
       throw new Error("Email taken.");
     }
-    // Babel plugin transform object rest spread
-    // const one = {city: 'Philadelphia'}
-    // const two = {population: 1500000, ...one}
-
-    const user = {
-      id: uuidv4(),
-      ...args.data,
-    };
-    db.users.push(user);
-    return user;
+    return prisma.mutation.createUser({ data: args.data }, info);
   },
   updateUser(parent, args, { db }, info) {
     const { id, data } = args;
@@ -38,23 +29,12 @@ const Mutation = {
     }
     return user;
   },
-  deleteUser(parent, args, { db }, info) {
-    const userIndex = db.users.findIndex((user) => user.id === args.id);
-    if (userIndex === -1) {
+  async deleteUser(parent, args, { prisma }, info) {
+    const userExists = await prisma.exists.User({ id: args.id });
+    if (!userExists) {
       throw new Error("User not found.");
     }
-    const deletedUsers = db.users.splice(userIndex, 1);
-    db.posts = db.posts.filter((post) => {
-      const match = post.author === args.id;
-      if (match) {
-        // delete all comments on deleted posts
-        db.comments = db.comments.filter((comment) => comment.post !== post.id);
-      }
-      return !match;
-    });
-    // delete user's comments on other posts
-    db.comments = db.comments.filter((comment) => comment.author !== args.id);
-    return deletedUsers[0];
+    return prisma.mutation.deleteUser({ where: { id: args.id } }, info);
   },
   createPost(parent, args, { db, pubsub }, info) {
     const userExists = db.users.some((user) => user.id === args.data.author);
