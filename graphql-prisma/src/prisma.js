@@ -9,6 +9,10 @@ const prisma = new Prisma({
 // prisma.query, prisma.mutation, prisma.subscription, prisma exists
 
 const createPostForUser = async (authorId, data) => {
+  const userExists = await prisma.exists.User({ id: authorId });
+  if (!userExists) {
+    throw new Error("User not found");
+  }
   const post = await prisma.mutation.createPost(
     {
       data: {
@@ -20,62 +24,40 @@ const createPostForUser = async (authorId, data) => {
         },
       },
     },
-    "{id title body}"
+    "{author {id name email posts {id title isPublished}}}"
   );
-  const user = await prisma.query.user(
-    {
-      where: { id: authorId },
-    },
-    "{id name email posts {id title isPublished}}"
-  );
-  return user;
+  return post.author;
 };
 
 // createPostForUser("ckboyxxei001p0772mlabrwrh", {
-//   title: "Great books to read",
-//   body: "The war of art",
+//   title: "Great books to read 3",
+//   body: "The war of art 3",
 //   isPublished: true,
-// }).then((user) => {
-//   console.log(JSON.stringify(user, undefined, 2));
-// });
+// })
+//   .then((user) => {
+//     console.log(JSON.stringify(user, undefined, 2));
+//   })
+//   .catch((error) => console.log(error.message));
 
 const updatePostforUser = async (postId, data) => {
+  const postExists = await prisma.exists.Post({ id: postId });
+  if (!postExists) {
+    throw new Error("Post not found");
+  }
   const post = await prisma.mutation.updatePost(
     {
       where: { id: postId },
       data,
     },
-    "{author {id}}"
+    "{author {id name email posts {id title isPublished}}}"
   );
-  const user = await prisma.query.user(
-    {
-      where: { id: post.author.id },
-    },
-    "{id name email posts {id title isPublished}}"
-  );
-  return user;
+  return post.author;
 };
 
-updatePostforUser("ckbq484t000190767z843iskc", {
-  isPublished: false,
-}).then((user) => {
-  console.log(JSON.stringify(user, undefined, 2));
-});
-
-// prisma.mutation
-//   .updatePost(
-//     {
-//       where: { id: "ckbq34o50000o0767ggn2gixi" },
-//       data: {
-//         body: "This is cool!",
-//         isPublished: true,
-//       },
-//     },
-//     "{id title body isPublished}"
-//   )
-//   .then((data) => {
-//     console.log(JSON.stringify(data, undefined, 2));
-//     return prisma.query
-//       .posts(null, "{id title body isPublished}")
-//       .then((data) => console.log(JSON.stringify(data, undefined, 2)));
-//   });
+// updatePostforUser("ckbq484t000190767z843iskc", {
+//   isPublished: false,
+// })
+//   .then((user) => {
+//     console.log(JSON.stringify(user, undefined, 2));
+//   })
+//   .catch((error) => console.log(error.message));

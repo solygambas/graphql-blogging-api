@@ -48,3 +48,10 @@
 //       .posts(null, "{id title body isPublished}")
 //       .then((data) => console.log(JSON.stringify(data, undefined, 2)));
 //   });
+
+// prisma.exists
+//   .User({
+//     id: "ckboyxxei001p0772mlabrwrh",
+//     },
+//   })
+//   .then((exists) => console.log(exists));
