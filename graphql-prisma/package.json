@@ -1,10 +1,12 @@
 {
   "name": "graphql-prisma",
   "version": "1.0.0",
-  "description": "A blogging API to understand Prisma 2.",
-  "main": "index.js",
+  "description": "",
+  "main": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "nodemon src/index.js --ext js,graphql --exec babel-node",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "get-schema": "graphql get-schema -p prisma"
   },
   "keywords": [],
   "repository": {
@@ -17,5 +19,16 @@
     "url": "https://github.com/solygambas/graphql-bootcamp/issues"
   },
   "homepage": "https://github.com/solygambas/graphql-bootcamp#readme",
-  "devDependencies": {}
+  "dependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "graphql-cli": "^2.16.4",
+    "graphql-yoga": "^1.16.7",
+    "prisma-binding": "^2.1.1",
+    "uuid": "^3.3.2"
+  },
+  "devDependencies": {
+    "nodemon": "^1.17.5"
+  }
 }
