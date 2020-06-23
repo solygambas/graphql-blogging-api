@@ -3,18 +3,14 @@ type Query {
   posts(query: String): [Post!]!
   comments: [Comment!]!
   me: User!
-  post: Post!
-  greeting(name: String, position: String): String!
-  add(a: Float!, b: Float!): Float!
-  sum(numbers: [Float!]!): Float!
-  grades: [Int!]!
+  post(id: ID!): Post!
 }
 
 type Mutation {
   login(data: LoginUserInput!): AuthPayload!
   createUser(data: CreateUserInput!): AuthPayload!
-  updateUser(id: ID!, data: UpdateUserInput!): User!
-  deleteUser(id: ID!): User!
+  updateUser(data: UpdateUserInput!): User!
+  deleteUser: User!
   createPost(data: CreatePostInput!): Post!
   updatePost(id: ID!, data: UpdatePostInput!): Post!
   deletePost(id: ID!): Post!
@@ -58,7 +54,6 @@ input UpdatePostInput {
 
 input CreateCommentInput {
   text: String!
-  author: ID!
   post: ID!
 }
 
