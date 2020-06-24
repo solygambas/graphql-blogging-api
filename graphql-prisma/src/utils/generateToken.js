@@ -1,8 +1,7 @@
 import jwt from "jsonwebtoken";
-import { tokenPhrase } from "../../config/config";
 
 const generateToken = (userId) => {
-  return jwt.sign({ userId }, tokenPhrase, {
+  return jwt.sign({ userId }, process.env.PRISMA_TOKEN, {
     expiresIn: "7 days",
   });
 };
