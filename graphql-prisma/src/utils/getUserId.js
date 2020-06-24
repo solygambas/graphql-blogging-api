@@ -3,7 +3,9 @@ import jwt from "jsonwebtoken";
 import { tokenPhrase } from "../../config/config";
 
 const getUserId = (request, requireAuth = true) => {
-  const header = request.request.headers.authorization;
+  const header = request.request
+    ? request.request.headers.authorization
+    : request.connection.context.Authorization;
   if (header) {
     const token = header.replace("Bearer ", "");
     const decoded = jwt.verify(token, tokenPhrase);
