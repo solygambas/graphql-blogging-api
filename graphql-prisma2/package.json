@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/solygambas/graphql-bootcamp.git"
+    "url": "git+https://github.com/solygambas/graphql-blogging-api.git"
   },
   "author": "solygambas",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/solygambas/graphql-bootcamp/issues"
+    "url": "https://github.com/solygambas/graphql-blogging-api/issues"
   },
-  "homepage": "https://github.com/solygambas/graphql-bootcamp#readme",
+  "homepage": "https://github.com/solygambas/graphql-blogging-api#readme",
   "devDependencies": {
     "@prisma/cli": "^2.0.1"
   },

@@ -8,19 +8,19 @@
     "start": "node dist/index.js",
     "heroku-postbuild": "babel src --out-dir dist --copy-files",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "get-schema": "graphql get-schema -p prisma"
+    "get-schema": "graphql get-schema -p prisma --dotenv config/dev.env"
   },
   "keywords": [],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/solygambas/graphql-bootcamp.git"
+    "url": "git+https://github.com/solygambas/graphql-blogging-api.git"
   },
   "author": "solygambas",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/solygambas/graphql-bootcamp/issues"
+    "url": "https://github.com/solygambas/graphql-blogging-api/issues"
   },
-  "homepage": "https://github.com/solygambas/graphql-bootcamp#readme",
+  "homepage": "https://github.com/solygambas/graphql-blogging-api#readme",
   "dependencies": {
     "@babel/polyfill": "^7.0.0",
     "babel-cli": "^6.26.0",

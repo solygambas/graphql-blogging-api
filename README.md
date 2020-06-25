@@ -1,10 +1,12 @@
-# The Modern GraphQL Bootcamp : Projects
+# GraphQL blogging API
+
+A GraphQL blogging API using Prisma, Apollo and Node.js.
 
 ## 1) GraphQL Basics
 
 A simple blogging API to understand GraphQL basics.
 
-[See graphql-basics folder](https://github.com/solygambas/graphql-bootcamp/tree/master/graphql-basics)
+[See graphql-basics folder](https://github.com/solygambas/graphql-blogging-api/tree/master/graphql-basics)
 
 ### Features
 
@@ -25,7 +27,7 @@ A simple blogging API to understand GraphQL basics.
 
 A blogging API to understand Prisma 1.
 
-[See graphql-prisma folder](https://github.com/solygambas/graphql-bootcamp/tree/master/graphql-prisma)
+[See graphql-prisma folder](https://github.com/solygambas/graphql-blogging-api/tree/master/graphql-prisma)
 
 ### Features
 
@@ -35,7 +37,7 @@ A blogging API to understand Prisma 1.
 
 A quick experimentation to understand Prisma 2.
 
-[See graphql-prisma2 folder](https://github.com/solygambas/graphql-bootcamp/tree/master/graphql-prisma2)
+[See graphql-prisma2 folder](https://github.com/solygambas/graphql-blogging-api/tree/master/graphql-prisma2)
 
 ### Features
 

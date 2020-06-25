@@ -10,14 +10,14 @@
   "keywords": [],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/solygambas/graphql-bootcamp.git"
+    "url": "git+https://github.com/solygambas/graphql-blogging-api.git"
   },
   "author": "solygambas",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/solygambas/graphql-bootcamp/issues"
+    "url": "https://github.com/solygambas/graphql-blogging-api/issues"
   },
-  "homepage": "https://github.com/solygambas/graphql-bootcamp#readme",
+  "homepage": "https://github.com/solygambas/graphql-blogging-api#readme",
   "dependencies": {
     "babel-cli": "^6.26.0",
     "babel-preset-env": "^1.7.0",
