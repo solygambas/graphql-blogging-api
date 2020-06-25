@@ -4,3 +4,4 @@ migrations/
 Studio/
 config/
 dist/
+.cache/
