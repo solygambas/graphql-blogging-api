@@ -10,6 +10,10 @@
     "test": "env-cmd ./config/test.env jest --watch --runInBand",
     "get-schema": "graphql get-schema -p prisma --dotenv config/dev.env"
   },
+  "jest": {
+    "globalSetup": "./tests/jest/globalSetup.js",
+    "globalTeardown": "./tests/jest/globalTeardown.js"
+  },
   "keywords": [],
   "repository": {
     "type": "git",
