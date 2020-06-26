@@ -52,3 +52,8 @@ enum MutationType {
   UPDATED
   DELETED
 }
+
+type AuthPayload {
+  user: User!
+  token: String!
+}
