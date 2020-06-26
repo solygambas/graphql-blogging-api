@@ -33,7 +33,13 @@ A blogging API to understand Prisma 1.
 
 - ...
 
-## 3) GraphQL Prisma 2
+## 3) GraphQL Prisma Boilerplate Project
+
+A boilerplate project to create a GraphQL API with Prisma 1.
+
+[See graphql-boilerplate folder](https://github.com/solygambas/graphql-blogging-api/tree/master/graphql-boilerplate)
+
+## 4) GraphQL Prisma 2
 
 A quick experimentation to understand Prisma 2.
 
