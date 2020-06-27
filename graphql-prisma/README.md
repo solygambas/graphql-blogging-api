@@ -21,7 +21,7 @@ A GraphQL blogging API to understand Prisma 1.
 - fetching data with Apollo Client.
 - writing test suites for User, Post and Comment with Jest.
 - seeding the database with test data, cleaning dummy data before each test and handling authentication.
-- using GraphQL variables to reuse operations.
+- using GraphQL variables to avoid duplicate code.
 - setting up Apollo Client to listen to subscriptions.
 
 Based on [The Modern GraphQL Bootcamp (with Node.js and Apollo)](https://www.udemy.com/course/graphql-bootcamp/) by Andrew Mead (2018)

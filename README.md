@@ -47,7 +47,7 @@ A GraphQL blogging API to understand Prisma 1.
 - creating 3 project stages with env-cmd and prisma deploy : development, test and production.
 - writing test suites for User, Post and Comment with Jest.
 - seeding the database with test data, cleaning dummy data before each test and handling authentication.
-- using GraphQL variables to reuse operations.
+- using GraphQL variables to avoid duplicate code.
 - setting up Apollo Client to listen to subscriptions.
 
 ## 3) GraphQL Prisma 2
