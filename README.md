@@ -1,6 +1,6 @@
 # GraphQL blogging API
 
-A GraphQL blogging API using Prisma, Apollo and Node.js.
+A GraphQL blogging API using Prisma, Apollo Client and Node.js.
 
 ## 1) GraphQL Basics
 
@@ -36,13 +36,13 @@ A GraphQL blogging API to understand Prisma 1.
 - setting up a PostgreSQL database and a server on Heroku with [Prisma Cloud integration](https://www.prisma.io/blog/heroku-integration-homihof6eifi).
 - installing pgAdmin to visualize data and exploring the Prisma GraphQL API (directives, create and connect).
 - integrating Prisma into Node.js with prisma-binding and graphql-cli.
-- using Prisma-binding and async/await method to perform CRUD operations : query, mutation, exists, subscription.
+- using prisma-binding and async/await method to perform CRUD operations : query, mutation, exists, subscription.
 - handling deletions with @relation, SET_NULL and CASCADE.
 - integrating operation arguments and refactoring resolvers for queries, mutations and subscriptions.
-- using Node as a middleware to protect the GraphQL API.
+- using Node.js as a middleware to protect the GraphQL API.
 - storing passwords with bcryptjs and handling tokens with JWT.
 - making sure the necessary data is always provided with fragments.
-- leveraging pagination (first, last, skip, before, after) and sorting (orderBy: field_ASC or field_DESC).
+- enabling pagination (first, last, skip, before, after) and sorting (orderBy: field_ASC or field_DESC).
 - synchronizing available sorting operations with prisma-graphql-import.
 - creating 3 project stages with env-cmd and prisma deploy : development, test and production.
 - writing test suites for User, Post and Comment with Jest.
@@ -75,6 +75,6 @@ An example to understand how to fetch data in the browser with Apollo Client.
 
 A boilerplate project to create a GraphQL API with Prisma 1.
 
-[See graphql-boilerplate folder](https://github.com/solygambas/graphql-blogging-api/tree/master/graphql-boilerplate)
+[See graphql-boilerplate folder](https://github.com/solygambas/graphql-blogging-api/tree/master/graphql-prisma-boilerplate)
 
 Based on [The Modern GraphQL Bootcamp (with Node.js and Apollo)](https://www.udemy.com/course/graphql-bootcamp/) by Andrew Mead (2018)
