@@ -18,7 +18,6 @@ A GraphQL blogging API to understand Prisma 1.
 - enabling pagination (first, last, skip, before, after) and sorting (orderBy: field_ASC or field_DESC).
 - synchronizing available sorting operations with prisma-graphql-import.
 - creating 3 project stages with env-cmd and prisma deploy : development, test and production.
-- fetching data with Apollo Client.
 - writing test suites for User, Post and Comment with Jest.
 - seeding the database with test data, cleaning dummy data before each test and handling authentication.
 - using GraphQL variables to avoid duplicate code.
