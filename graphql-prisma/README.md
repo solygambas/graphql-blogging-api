@@ -2,8 +2,6 @@
 
 A GraphQL blogging API to understand Prisma 1.
 
-[See Demo deployed on Heroku](https://prisma-node-server.herokuapp.com/)
-
 ## Features
 
 - setting up a PostgreSQL database and a server on Heroku with [Prisma Cloud integration](https://www.prisma.io/blog/heroku-integration-homihof6eifi).

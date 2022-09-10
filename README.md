@@ -27,8 +27,6 @@ A simple blogging API to understand GraphQL basics.
 
 A GraphQL blogging API to understand Prisma 1.
 
-[See Demo deployed on Heroku](https://prisma-node-server.herokuapp.com/)
-
 [See graphql-prisma folder](https://github.com/solygambas/graphql-blogging-api/tree/master/graphql-prisma)
 
 ## Features
