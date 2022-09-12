@@ -8,4 +8,3 @@ An example to understand how to deploy a Next.js website with Prisma client.
 - using Prisma client to handle database operations.
 - serving a REST API with Next.js.
 - creating a Next.js page to interact with the API.
-- deploying on Vercel.
