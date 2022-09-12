@@ -6,7 +6,7 @@ A GraphQL blogging API using Prisma, Apollo Client and Node.js.
 
 A simple blogging API to understand GraphQL basics.
 
-[See graphql-basics folder](https://github.com/solygambas/graphql-blogging-api/tree/master/graphql-basics)
+[See graphql-basics folder](graphql-basics)
 
 ### Features
 
@@ -27,7 +27,7 @@ A simple blogging API to understand GraphQL basics.
 
 A GraphQL blogging API to understand Prisma 1.
 
-[See graphql-prisma folder](https://github.com/solygambas/graphql-blogging-api/tree/master/graphql-prisma)
+[See graphql-prisma folder](graphql-prisma)
 
 ## Features
 
@@ -52,7 +52,7 @@ A GraphQL blogging API to understand Prisma 1.
 
 A quick experimentation to understand Prisma 2.
 
-[See graphql-prisma2 folder](https://github.com/solygambas/graphql-blogging-api/tree/master/graphql-prisma2)
+[See graphql-prisma2 folder](graphql-prisma2)
 
 ### Features
 
@@ -63,16 +63,30 @@ A quick experimentation to understand Prisma 2.
 - adding data with Prisma studio.
 - fetching data with Prisma client.
 
-## 4) Apollo Client
+## 4) GraphQL Prisma Next.js Project
+
+An example to understand how to deploy a Next.js website with Prisma client.
+
+### Features
+
+- creating a PostgreSQL database.
+- using Prisma client to handle database operations.
+- serving a REST API with Next.js.
+- creating a Next.js page to interact with the API.
+- deploying on Vercel.
+
+[See graphql-prisma-next folder](graphql-prisma-next)
+
+## 5) Apollo Client
 
 An example to understand how to fetch data in the browser with Apollo Client.
 
-[See apollo-client folder](https://github.com/solygambas/graphql-blogging-api/tree/master/apollo-client)
+[See apollo-client folder](apollo-client)
 
-## 5) GraphQL Prisma Boilerplate Project
+## 6) GraphQL Prisma Boilerplate Project
 
 A boilerplate project to create a GraphQL API with Prisma 1.
 
-[See graphql-boilerplate folder](https://github.com/solygambas/graphql-blogging-api/tree/master/graphql-prisma-boilerplate)
+[See graphql-boilerplate folder](graphql-prisma-boilerplate)
 
 Based on [The Modern GraphQL Bootcamp (with Node.js and Apollo)](https://www.udemy.com/course/graphql-bootcamp/) by Andrew Mead (2018)
